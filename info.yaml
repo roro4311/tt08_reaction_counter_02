@@ -1,0 +1,74 @@
+# Tiny Tapeout project information
+project:
+  title:        "Reaction Timer"      # Project title
+  author:       "Roshen Ramnarine"    # Your name
+  discord:      "roro4311"            # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Measures reaction time and displays it on four 7-segment displays" # One line description of what your project does
+  language:     "Verilog"             # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000              # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_reaction_timer"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_reaction_timer.v"
+    - "reaction_timer.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+pinout:
+  # Inputs
+  ui[0]: "clk"      # System clock
+  ui[1]: "rst_n"    # System reset (active low)
+  ui[2]: "ui_in[0]" # Button input
+  ui[3]: ""
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
+
+  # Outputs
+  uo[0]: "uo_out[0]" # LED output
+  uo[1]: ""         # Unused
+  uo[2]: ""         # Unused
+  uo[3]: ""         # Unused
+  uo[4]: ""         # Unused
+  uo[5]: ""         # Unused
+  uo[6]: ""         # Unused
+  uo[7]: ""         # Unused
+
+  # Bidirectional IOs
+  uio[0]: "seg0[0]"   # 7-segment display 0 segments (a)
+  uio[1]: "seg0[1]"   # 7-segment display 0 segments (b)
+  uio[2]: "seg0[2]"   # 7-segment display 0 segments (c)
+  uio[3]: "seg0[3]"   # 7-segment display 0 segments (d)
+  uio[4]: "seg0[4]"   # 7-segment display 0 segments (e)
+  uio[5]: "seg0[5]"   # 7-segment display 0 segments (f)
+  uio[6]: "seg0[6]"   # 7-segment display 0 segments (g)
+  uio[7]: "seg1[0]"   # 7-segment display 1 segments (a)
+  uio[8]: "seg1[1]"   # 7-segment display 1 segments (b)
+  uio[9]: "seg1[2]"   # 7-segment display 1 segments (c)
+  uio[10]: "seg1[3]"  # 7-segment display 1 segments (d)
+  uio[11]: "seg1[4]"  # 7-segment display 1 segments (e)
+  uio[12]: "seg1[5]"  # 7-segment display 1 segments (f)
+  uio[13]: "seg1[6]"  # 7-segment display 1 segments (g)
+  uio[14]: "seg2[0]"  # 7-segment display 2 segments (a)
+  uio[15]: "seg2[1]"  # 7-segment display 2 segments (b)
+  uio[16]: "seg2[2]"  # 7-segment display 2 segments (c)
+  uio[17]: "seg2[3]"  # 7-segment display 2 segments (d)
+  uio[18]: "seg2[4]"  # 7-segment display 2 segments (e)
+  uio[19]: "seg2[5]"  # 7-segment display 2 segments (f)
+  uio[20]: "seg2[6]"  # 7-segment display 2 segments (g)
+  uio[21]: "seg3[0]"  # 7-segment display 3 segments (a)
+  uio[22]: "seg3[1]"  # 7-segment display 3 segments (b)
+  uio[23]: "seg3[2]"  # 7-segment display 3 segments (c)
+  uio[24]: "seg3[3]"  # 7-segment display 3 segments (d)
+  uio[25]: "seg3[4]"  # 7-segment display 3 segments (e)
+  uio[26]: "seg3[5]"  # 7-segment display 3 segments (f)
+  uio[27]: "seg3[6]"  # 7-segment display 3 segments (g)
+
