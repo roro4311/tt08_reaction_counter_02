@@ -72,3 +72,5 @@ pinout:
   uio[26]: "seg3[5]"  # 7-segment display 3 segments (f)
   uio[27]: "seg3[6]"  # 7-segment display 3 segments (g)
 
+  yaml_version: 6
+
